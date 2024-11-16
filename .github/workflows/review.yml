@@ -12,3 +12,4 @@ jobs:
         with:
           assignees: ${{ github.actor }} # assign pull request author
           reviewers: ${{ vars.REVIEWERS }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
