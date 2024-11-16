@@ -3,6 +3,10 @@ name: Review Assign
 on:
   pull_request:
     types: [opened, ready_for_review]
+    
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
   assign:
@@ -12,4 +16,3 @@ jobs:
         with:
           assignees: ${{ github.actor }} # assign pull request author
           reviewers: ${{ vars.REVIEWERS }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
